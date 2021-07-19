@@ -78,7 +78,7 @@ open class Streamer: Streaming {
 
     // MARK: - Setup
 
-    func setupAudioEngine() {
+    open func setupAudioEngine() {
         os_log("%@ - %d", log: Streamer.logger, type: .debug, #function, #line)
 
         // Attach nodes
