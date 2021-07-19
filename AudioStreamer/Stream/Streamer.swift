@@ -78,7 +78,7 @@ open class Streamer: Streaming {
 
     // MARK: - Setup
 
-    open func setupAudioEngine() {
+    func setupAudioEngine() {
         os_log("%@ - %d", log: Streamer.logger, type: .debug, #function, #line)
 
         // Attach nodes
@@ -88,7 +88,7 @@ open class Streamer: Streaming {
         connectNodes()
 
         // Prepare the engine
-        engine.prepare()
+        //engine.prepare()
         
         /// Use timer to schedule the buffers (this is not ideal, wish AVAudioEngine provided a pull-model for scheduling buffers)
         let interval = 1 / (readFormat.sampleRate / Double(readBufferSize))
